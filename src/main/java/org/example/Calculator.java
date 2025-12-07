@@ -9,7 +9,7 @@ public class Calculator {
         return a * b;
     }
     public static int divide(int a, int b) {
-        if (b == 0) throw new IllegalArgumentException("Cannot divide by zero");
+        if (b == 0) throw new IllegalArgumentException(" b Cannot divide by zero");
         return a / b;
     }
 
