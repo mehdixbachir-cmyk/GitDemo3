@@ -29,7 +29,17 @@ public class CalculatorTest {
 
     public void testModulo() {
         Assertions.assertEquals(1, Calculator.modulo(10, 3));
+
+
+
+
     }
+    @Test
+    public void testSubtract() {
+        Calculator calc = new Calculator();
+        assertEquals(3, calc.subtract(5, 2));
+    }
+
 
 
 
