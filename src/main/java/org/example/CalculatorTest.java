@@ -2,6 +2,8 @@ package org.example;
 
 import static org.junit.Assert.assertThrows;
 import static org.junit.jupiter.api.Assertions.assertEquals;
+
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 public class CalculatorTest {
@@ -21,8 +23,14 @@ public class CalculatorTest {
 
     @Test
     void testDivideByZero() {
-        assertThrows(IllegalArgumentException.class, () -> Calculator.divide(5, 0));
+        assertThrows(IllegalArgumentException.class, () -> Calculator.divide(10, 0));
     }
+    @Test
+
+    public void testModulo() {
+        Assertions.assertEquals(1, Calculator.modulo(10, 3));
+    }
+
 
 
 }
