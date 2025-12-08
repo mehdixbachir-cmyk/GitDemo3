@@ -1,10 +1,10 @@
 package com.ehei.gi4;
 
 public class Produit {
-    private final Long id;
-    private final String nom;
-    private final double prix;
-    private final int quantite;
+    private Long id;
+    private String nom;
+    private double prix;
+    private int quantite;
 
     public Produit(Long id, String nom, double prix, int quantite) {
         this.id = id;
@@ -13,7 +13,13 @@ public class Produit {
         this.quantite = quantite;
     }
 
+    // Getters & Setters
     public Long getId() { return id; }
     public String getNom() { return nom; }
+    public double getPrix() { return prix; }
+    public int getQuantite() { return quantite; }
 
-    public void setNom(String nom)
+    public void setNom(String nom) { this.nom = nom; }
+    public void setPrix(double prix) { this.prix = prix; }
+    public void setQuantite(int quantite) { this.quantite = quantite; }
+}
