@@ -12,5 +12,7 @@ public class Calculator {
 
     public static void main(String[] args) {
         System.out.println("Hello GitDemo3!");
+        // Test comment for Git workflow
+
     }
 }
