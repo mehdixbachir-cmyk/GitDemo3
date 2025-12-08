@@ -36,4 +36,22 @@ class ProduitServiceTest {
         Exception exception = assertThrows(Exception.class, () -> service.addProduct(p));
         assertEquals("Prix et quantité doivent être positifs", exception.getMessage());
     }
+    @Test
+    void testUpdateProductSuccess() throws Exception {
+        Produit p = new Produit(1L, "Produit1", 100, 5);
+        service.addProduct(p);
+        p.setPrix(120);
+        p.setQuantite(10);
+        service.updateProduct(p);
+        assertEquals(120, service.getAllProducts().get(0).getPrix());
+        assertEquals(10, service.getAllProducts().get(0).getQuantite());
+    }
+
+    @Test
+    void testUpdateProductNotFound() {
+        Produit p = new Produit(2L, "Produit2", 50, 3);
+        Exception exception = assertThrows(Exception.class, () -> service.updateProduct(p));
+        assertEquals("Produit introuvable", exception.getMessage());
+    }
+
 }
